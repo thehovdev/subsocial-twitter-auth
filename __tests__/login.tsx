@@ -14,18 +14,14 @@ describe('Home', () => {
 
   it('renders a heading', () => {
     render(HomeComponent)
-
     let result = screen.getByText(/sign in/i);
-
     expect(result).toBeInTheDocument()
   })
 
   it('click on login btn', async () => {
     render(HomeComponent);
-
     const elem = screen.getByTestId('signin-btn')
     await userEvent.click(elem);
-
     expect(elem).toBeInTheDOM()
   })
 })
