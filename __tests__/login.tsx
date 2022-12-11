@@ -6,7 +6,6 @@ import { Provider } from 'react-redux'
 import { store } from '../store'
 
 describe('Home', () => {
-  const user = userEvent.setup()
   const HomeComponent = <Provider store={store}>
                           <SessionProvider>
                             <Home />
@@ -22,7 +21,6 @@ describe('Home', () => {
   })
 
   it('click on login btn', async () => {
-    const handleClick = jest.fn();
     render(HomeComponent);
 
     const elem = screen.getByTestId('signin-btn')
